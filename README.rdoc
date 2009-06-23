@@ -10,13 +10,24 @@ my best to answer them with an example.
 
 == FAQ
 
-=== How do I have a parent plugin with multiple 'child' plugins?
+=== How do I make a parent plugin with multiple "child" plugins?
 
 Take a look at <tt>lib/hoe/omnibus.rb</tt>. It activates two other
 plugins, <tt>:first</tt> and <tt>:second</tt>. It's used in the
 top-level <tt>Rakefile</tt>:
 
     Hoe.plugin :omnibus
+
+Only files for plugins explicitly activated by <tt>Hoe.plugin</tt> get
+loaded, but plugin files can activate other plugins without any
+problems.
+
+=== How do I make an auto-activating plugin?
+
+You can't! Early versions of the Hoe plugin architecture allowed you
+to do this, but it's too easy for plugins to infect unsuspecting
+Rakefiles. Explicitly activate the plugins your Rakefile needs with
+<tt>Hoe.plugin</tt>.
 
 == License
 
