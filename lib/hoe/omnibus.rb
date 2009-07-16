@@ -5,6 +5,9 @@ Hoe.plugin :first
 Hoe.plugin :second
 
 module Hoe::Omnibus
+
+  # The 'initialize' is optional.
+
   def initialize_omnibus
     warn "initialize_omnibus"
   end
