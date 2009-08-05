@@ -10,6 +10,14 @@ my best to answer them with an example.
 
 == FAQ
 
+=== How do I disable a plugin?
+
+Remove the plugin's symbol from the <tt>Hoe.plugins</tt> array before
+calling <tt>Hoe.spec</tt>.
+
+    # I don't release to RubyForge! Ha!
+    Hoe.plugins.delete :rubyforge
+
 === How do I make a parent plugin with multiple "child" plugins?
 
 Take a look at <tt>lib/hoe/omnibus.rb</tt>. It activates two other

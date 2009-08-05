@@ -5,6 +5,8 @@ require "hoe"
 
 Hoe.plugin :omnibus
 
+Hoe.plugins.delete :rubyforge
+
 Hoe.spec "hoe-plugin-examples" do
   developer "John Barnette", "jbarnette@rubyforge.org"
 
