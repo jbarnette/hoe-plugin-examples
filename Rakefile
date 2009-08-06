@@ -13,4 +13,6 @@ Hoe.spec "hoe-plugin-examples" do
   self.extra_rdoc_files = FileList["*.rdoc"]
   self.history_file     = "CHANGELOG.rdoc"
   self.readme_file      = "README.rdoc"
+
+  extra_deps << ["hoe", ">= 2.2.0"]
 end
